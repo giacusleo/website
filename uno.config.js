@@ -5,13 +5,7 @@ import presetIcons from '@unocss/preset-icons'
 export default defineConfig({
   presets: [
     presetUno(),
-    presetIcons({
-      scale: 1.2,
-      extraProperties: {
-        'display': 'inline-block',
-        'vertical-align': 'middle'
-      }
-    })
+    presetIcons()
   ],
   theme: {
     colors: {
@@ -19,6 +13,7 @@ export default defineConfig({
     }
   },
   shortcuts: {
-    'btn': 'px-4 py-2 rounded-lg bg-primary text-white hover:opacity-90 transition-opacity'
+    'prose': 'text-gray-700 dark:text-gray-200',
+    'prose-invert': 'text-gray-200 dark:text-gray-700'
   }
 }) 
