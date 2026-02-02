@@ -1,21 +1,30 @@
 <template>
-  <div class="min-h-screen font-sans prose dark:prose-invert max-w-none">
-    <header class="p-6">
-      <nav class="flex justify-between items-center max-w-3xl mx-auto">
-        <router-link to="/" class="text-xl font-bold no-underline">
-          Giacomo Leo @ giacusleo.me
-        </router-link>
-        <div class="flex gap-4">
-          <router-link to="/blog" class="no-underline">Blog</router-link>
-          <router-link to="/projects" class="no-underline">Projects</router-link>
-          <router-link to="/talks" class="no-underline">Talks</router-link>
-          <router-link to="/sponsors" class="no-underline">Sponsors</router-link>
-        </div>
-      </nav>
-    </header>
-
-    <main class="max-w-3xl mx-auto px-6 py-12">
-      <router-view />
+  <div class="min-h-screen flex flex-col bg-background">
+    <Header />
+    <main class="flex-1">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
+    <Footer />
   </div>
-</template> 
+</template>
+
+<script setup>
+import Header from './components/layout/Header.vue'
+import Footer from './components/layout/Footer.vue'
+</script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

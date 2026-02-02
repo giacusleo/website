@@ -1,31 +1,41 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { defineAsyncComponent } from 'vue'
-import LoadingSpinner from './components/LoadingSpinner.vue'
 
 const routes = [
   {
     path: '/',
-    component: defineAsyncComponent({
-      loader: () => import('./pages/Home.vue'),
-      loadingComponent: LoadingSpinner,
-      delay: 200
-    })
+    name: 'Home',
+    component: () => import('./pages/Home.vue'),
+    meta: { title: 'Home' }
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('./pages/About.vue'),
+    meta: { title: 'About & CV' }
   },
   {
     path: '/projects',
-    component: defineAsyncComponent({
-      loader: () => import('./pages/Projects.vue'),
-      loadingComponent: LoadingSpinner,
-      delay: 200
-    })
+    name: 'Projects',
+    component: () => import('./pages/Projects.vue'),
+    meta: { title: 'Projects' }
   },
   {
     path: '/blog',
-    component: () => import('./pages/Blog.vue')
+    name: 'Blog',
+    component: () => import('./pages/Blog.vue'),
+    meta: { title: 'Blog' }
   },
   {
-    path: '/talks',
-    component: () => import('./pages/Talks.vue')
+    path: '/blog/:slug',
+    name: 'BlogPost',
+    component: () => import('./pages/BlogPost.vue'),
+    meta: { title: 'Blog Post' }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('./pages/Contact.vue'),
+    meta: { title: 'Contact' }
   }
 ]
 
@@ -36,9 +46,11 @@ export const router = createRouter({
     if (savedPosition) {
       return savedPosition
     }
-    if (to.hash) {
-      return { el: to.hash, behavior: 'smooth' }
-    }
     return { top: 0, behavior: 'smooth' }
   }
-}) 
+})
+
+router.beforeEach((to) => {
+  const baseTitle = 'Giacomo Leo | Analytics Engineer'
+  document.title = to.meta.title ? `${to.meta.title} | ${baseTitle}` : baseTitle
+})
