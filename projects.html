@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data engineering and analytics projects by Giacomo Leo.">
+  <title>Projects | Giacomo Leo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">Giacomo Leo</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+          <h1>Projects</h1>
+          <p style="font-size: 1.125rem;">
+            A collection of data engineering and analytics projects showcasing my expertise 
+            in building scalable data solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">🏗️</div>
+              <div class="project-title">
+                <h3>Cloud Data Warehouse Migration</h3>
+                <span class="project-badge">Data Engineering</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Led end-to-end migration from legacy on-premise data warehouse to Google BigQuery. 
+              Implemented dbt for data transformation and Airflow for orchestration, resulting in 
+              300% query performance improvement and 40% cost reduction.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">300%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Performance</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">40%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Cost Savings</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">10TB</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Data Volume</div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">BigQuery</span>
+              <span class="tag">dbt</span>
+              <span class="tag">Airflow</span>
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">⚡</div>
+              <div class="project-title">
+                <h3>Real-time Analytics Pipeline</h3>
+                <span class="project-badge">Data Engineering</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Built a streaming data pipeline processing over 1 million events daily. 
+              Implemented Kafka for message queuing and Flink for stream processing, 
+              achieving sub-second latency for real-time analytics.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">1M+</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Events/Day</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);"><1s</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Latency</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">99.9%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Uptime</div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Kafka</span>
+              <span class="tag">Flink</span>
+              <span class="tag">Python</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">📊</div>
+              <div class="project-title">
+                <h3>Self-Service BI Platform</h3>
+                <span class="project-badge">Analytics</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Created an automated reporting infrastructure using dbt and Looker. 
+              Enabled business teams to access real-time insights without engineering support, 
+              saving 20 hours per week of analyst time.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">50+</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Reports</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">200+</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Users</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">20h</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Time Saved</div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">dbt</span>
+              <span class="tag">Looker</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">🎯</div>
+              <div class="project-title">
+                <h3>Customer Segmentation Model</h3>
+                <span class="project-badge">Analytics</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Developed a machine learning model to segment customers based on behavior and 
+              transaction history. Integrated with marketing automation tools to drive 
+              personalized campaigns and improve ROI by 150%.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">85%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Accuracy</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">8</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Segments</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">150%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">ROI</div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">AWS SageMaker</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">✅</div>
+              <div class="project-title">
+                <h3>Data Quality Framework</h3>
+                <span class="project-badge">Data Engineering</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Implemented comprehensive data quality monitoring using Great Expectations. 
+              Automated validation and alerting for critical data pipelines, catching 100+ 
+              issues before they reached production.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">500+</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Tests</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">100+</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Issues Caught</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">95%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Coverage</div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Great Expectations</span>
+              <span class="tag">Python</span>
+              <span class="tag">Airflow</span>
+              <span class="tag">Slack API</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">📈</div>
+              <div class="project-title">
+                <h3>Executive Dashboard Suite</h3>
+                <span class="project-badge">Visualization</span>
+              </div>
+            </div>
+            <p class="project-description">
+              Designed and built a suite of executive dashboards providing real-time visibility 
+              into key business metrics across sales, marketing, and operations. 
+              Enabled data-driven decision making at the leadership level.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1rem;">
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">12</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Dashboards</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">100+</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">KPIs</div>
+              </div>
+              <div style="text-align: center;">
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--accent-primary);">Real-time</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Refresh</div>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Looker</span>
+              <span class="tag">SQL</span>
+              <span class="tag">dbt</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="card" style="text-align: center; padding: 3rem; border: 2px dashed var(--border);">
+          <div style="width: 64px; height: 64px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 1rem;">More Projects Coming Soon</h3>
+          <p style="max-width: 400px; margin: 0 auto 1.5rem;">
+            I'm continuously working on new projects. Check back soon for updates, or 
+            get in touch if you'd like to discuss a potential collaboration.
+          </p>
+          <a href="contact.html" class="btn btn-secondary">Let's Work Together</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">© 2024 Giacomo Leo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/giacusleo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/giacomoleo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:contact@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

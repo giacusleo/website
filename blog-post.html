@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Building Scalable Data Pipelines with dbt and Airflow - A comprehensive guide for analytics engineers.">
+  <title>Building Scalable Data Pipelines | Giacomo Leo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">Giacomo Leo</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article class="section" style="padding-top: 120px;">
+      <div class="container" style="max-width: 700px;">
+        <a href="blog.html" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Blog
+        </a>
+
+        <div style="margin-bottom: 2rem;">
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+            <span class="blog-category">Data Engineering</span>
+            <span style="color: var(--text-muted);">Jan 15, 2024</span>
+            <span style="color: var(--text-muted);">•</span>
+            <span style="color: var(--text-muted);">8 min read</span>
+          </div>
+          <h1 style="margin-bottom: 1rem;">Building Scalable Data Pipelines with dbt and Airflow</h1>
+          <p style="font-size: 1.125rem; color: var(--text-secondary);">
+            Learn how to design and implement robust data pipelines that can handle millions of records 
+            while maintaining data quality and reliability.
+          </p>
+        </div>
+
+        <div style="line-height: 1.8; color: var(--text-secondary);">
+          <p>
+            This is a sample blog post template. When you're ready to write your own blog posts, 
+            you can replace this content with your actual writing. Each blog post can cover topics 
+            like data engineering best practices, analytics tutorials, or insights from your 
+            professional experience.
+          </p>
+
+          <h2 style="color: var(--text-primary); margin-top: 2.5rem; margin-bottom: 1rem;">Why Write About Data Engineering?</h2>
+          <p>
+            Sharing your knowledge through blog posts serves multiple purposes. It helps establish 
+            you as a thought leader in the analytics engineering space, demonstrates your expertise 
+            to potential clients, and contributes to the broader data community.
+          </p>
+
+          <p>Topics you might consider writing about:</p>
+          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li>Technical tutorials on specific tools (dbt, Airflow, BigQuery)</li>
+            <li>Case studies from projects you've worked on</li>
+            <li>Best practices for data modeling and pipeline design</li>
+            <li>Industry trends and emerging technologies</li>
+            <li>Lessons learned from challenges you've overcome</li>
+          </ul>
+
+          <h2 style="color: var(--text-primary); margin-top: 2.5rem; margin-bottom: 1rem;">Getting Started</h2>
+          <p>
+            To add real blog posts, you have a few options:
+          </p>
+          <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Simple approach:</strong> Update the content in this HTML file directly</li>
+            <li><strong>Multiple posts:</strong> Create separate HTML files for each blog post</li>
+            <li><strong>CMS integration:</strong> Connect to a headless CMS like Contentful or Sanity</li>
+          </ol>
+
+          <div style="background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 0.5rem; padding: 1.5rem; margin: 2rem 0;">
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1rem;">💡 Pro Tip</h3>
+            <p style="margin: 0; font-size: 0.95rem;">
+              Start with just 2-3 blog posts that showcase your expertise. Quality is better than 
+              quantity, and you can always add more content over time.
+            </p>
+          </div>
+
+          <p>
+            Remember to include code examples, diagrams, and real-world scenarios to make your 
+            posts more engaging and useful for readers. Share your unique perspective and 
+            experiences—that's what will set your blog apart.
+          </p>
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <span style="color: var(--text-muted);">Share:</span>
+              <div style="display: flex; gap: 0.75rem;">
+                <a href="#" style="color: var(--text-muted);" aria-label="Share on Twitter">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a href="#" style="color: var(--text-muted);" aria-label="Share on LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-secondary">Discuss This Post</a>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+          <h3 style="margin-bottom: 1.5rem;">Related Articles</h3>
+          <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+            <div class="blog-card" onclick="window.location.href='blog-post.html'" style="cursor: pointer;">
+              <div class="blog-meta" style="margin-bottom: 0.75rem;">
+                <span class="blog-category">Analytics</span>
+                <span class="blog-date">Dec 20, 2023</span>
+              </div>
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">Data Warehouse Best Practices for Analytics Engineers</h4>
+            </div>
+            <div class="blog-card" onclick="window.location.href='blog-post.html'" style="cursor: pointer;">
+              <div class="blog-meta" style="margin-bottom: 0.75rem;">
+                <span class="blog-category">Architecture</span>
+                <span class="blog-date">Nov 8, 2023</span>
+              </div>
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">The Modern Data Stack: Tools and Architecture</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">© 2024 Giacomo Leo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/giacusleo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/giacomoleo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:contact@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
