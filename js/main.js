@@ -1,7 +1,16 @@
-// Main JavaScript - Minimal interactions
+// Theme Toggle Functionality
+(function() {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  const toggle = document.getElementById('theme-toggle');
+  if (toggle) {
+    toggle.checked = savedTheme === 'light';
+  }
+})();
 
-// Mobile menu toggle
+// Main JavaScript - Minimal interactions
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const nav = document.querySelector('.nav');
   
@@ -18,6 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
       nav.classList.remove('active');
     });
   });
+
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('change', function() {
+      const newTheme = this.checked ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
 });
 
 // Smooth scroll for anchor links
