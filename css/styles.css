@@ -111,6 +111,23 @@ a:hover {
   z-index: 1000;
 }
 
+[data-theme="light"] .header {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+[data-theme="light"] .logo {
+  color: #ffffff;
+}
+
+[data-theme="light"] .nav a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="light"] .nav a:hover,
+[data-theme="light"] .nav a.active {
+  color: #ffffff;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
