@@ -15,8 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const nav = document.querySelector('.nav');
   
   if (mobileMenuBtn && nav) {
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
     mobileMenuBtn.addEventListener('click', function() {
       nav.classList.toggle('active');
+      const isOpen = nav.classList.contains('active');
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
   
@@ -25,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
       nav.classList.remove('active');
+      if (mobileMenuBtn) {
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 
@@ -37,13 +43,47 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('theme', newTheme);
     });
   }
+
+  // Replace static year in footer with current year
+  const footerText = document.querySelectorAll('.footer-text');
+  const currentYear = new Date().getFullYear();
+  footerText.forEach(item => {
+    item.textContent = `© ${currentYear} Giacomo Leo. All rights reserved.`;
+  });
+
+  // Contact form fallback: opens prefilled email client
+  const contactForm = document.querySelector('[data-contact-form]');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = contactForm.querySelector('#name')?.value.trim();
+      const email = contactForm.querySelector('#email')?.value.trim();
+      const projectType = contactForm.querySelector('#project-type')?.value.trim();
+      const message = contactForm.querySelector('#message')?.value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in your name, email, and message.');
+        return;
+      }
+
+      const subject = encodeURIComponent(`[Website Inquiry] ${projectType || 'General'}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nProject type: ${projectType || 'Not specified'}\n\nMessage:\n${message}`
+      );
+      window.location.href = `mailto:contact@example.com?subject=${subject}&body=${body}`;
+    });
+  }
 });
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (!href || href === '#') {
+      return;
+    }
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
