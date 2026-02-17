@@ -141,13 +141,13 @@ textarea:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 82px;
   gap: 1rem;
 }
 
 .logo {
   font-weight: 800;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
@@ -159,7 +159,7 @@ textarea:focus-visible {
 
 .nav a {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
@@ -204,6 +204,18 @@ textarea:focus-visible {
   transition: all 0.3s ease;
 }
 
+.theme-toggle-icon {
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  font-size: 11px;
+  line-height: 1;
+  color: #0f172a;
+  z-index: 1;
+  pointer-events: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
 .theme-toggle input:checked + .toggle-slider {
   background: var(--accent-primary);
   border-color: var(--accent-primary);
@@ -214,9 +226,14 @@ textarea:focus-visible {
   background: white;
 }
 
+.theme-toggle input:checked + .toggle-slider .theme-toggle-icon {
+  transform: translateX(24px);
+  color: #f59e0b;
+}
+
 /* Hero Section */
 .hero {
-  padding-top: 120px;
+  padding-top: 102px;
   padding-bottom: 4rem;
 }
 

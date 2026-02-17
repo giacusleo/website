@@ -5,6 +5,10 @@
   const toggle = document.getElementById('theme-toggle');
   if (toggle) {
     toggle.checked = savedTheme === 'light';
+    const toggleIcon = document.querySelector('.theme-toggle-icon');
+    if (toggleIcon) {
+      toggleIcon.textContent = savedTheme === 'light' ? '☀' : '🌙';
+    }
   }
 })();
 
@@ -41,6 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const newTheme = this.checked ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      const toggleIcon = document.querySelector('.theme-toggle-icon');
+      if (toggleIcon) {
+        toggleIcon.textContent = newTheme === 'light' ? '☀' : '🌙';
+      }
     });
   }
 
